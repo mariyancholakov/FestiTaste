@@ -31,18 +31,18 @@ export default function SectionTitle({
     >
       {eyebrow ? (
         <p
-          className={`mb-3 text-sm font-semibold uppercase tracking-[0.35em] ${eyebrowClass}`}
+          className={`mb-3 text-xs font-semibold uppercase tracking-[0.3em] sm:text-sm sm:tracking-[0.35em] ${eyebrowClass}`}
         >
           {eyebrow}
         </p>
       ) : null}
       <h2
-        className={`font-display text-3xl font-bold leading-tight sm:text-4xl ${titleClass}`}
+        className={`font-display text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl ${titleClass}`}
       >
         {title}
       </h2>
       {description ? (
-        <p className={`mt-4 text-base leading-8 sm:text-lg ${descriptionClass}`}>
+        <p className={`mt-4 text-sm leading-7 sm:text-base sm:leading-8 lg:text-lg ${descriptionClass}`}>
           {description}
         </p>
       ) : null}

@@ -59,8 +59,8 @@ export default function ContactPage() {
   return (
     <div className="pb-24">
       <section className="bg-parchment">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="rounded-[36px] bg-parchment px-6 py-14 sm:px-10">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+          <div className="rounded-[36px] bg-parchment px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
             <SectionTitle
               eyebrow="Контакт"
               title="Нека планираме следващото вкусно събитие заедно"
@@ -71,15 +71,15 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-cream">
-        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <div className="space-y-6">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:px-8">
+          <div className="space-y-5 sm:space-y-6">
             {contactCards.map((card) => (
               <article
                 key={card.title}
-                className="rounded-[28px] border border-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
+                className="rounded-[28px] border border-border bg-white p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-6"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-light text-primary">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-light text-primary sm:h-14 sm:w-14">
                     <card.icon size={24} />
                   </div>
                   <div>
@@ -101,14 +101,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-parchment py-20">
+      <section className="bg-parchment py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="FAQ"
             title="Често задавани въпроси"
             description="Кратки отговори на най-честите запитвания, които получаваме около събитията и офертите."
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:mt-10 lg:gap-6">
             {faq.map((item) => (
               <article
                 key={item.question}

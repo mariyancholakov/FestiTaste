@@ -22,19 +22,19 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-parchment/95 backdrop-blur-sm">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
         <Link
           href="/"
           className="flex items-center gap-3 text-dark transition-all duration-200 hover:text-primary"
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-sm font-bold text-white">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xs font-bold text-white sm:h-11 sm:w-11 sm:text-sm">
             FT
           </span>
           <span>
-            <span className="block font-display text-xl font-bold leading-none">
+            <span className="block font-display text-lg font-bold leading-none sm:text-xl">
               Festi<span className="text-primary">Taste</span>
             </span>
-            <span className="block text-xs uppercase tracking-[0.35em] text-text-muted">
+            <span className="block text-[10px] uppercase tracking-[0.28em] text-text-muted sm:text-xs sm:tracking-[0.35em]">
               Events
             </span>
           </span>

@@ -61,8 +61,8 @@ export default function AboutPage() {
   return (
     <div>
       <section className="bg-parchment">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="rounded-[36px] bg-parchment px-6 py-14 sm:px-10">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+          <div className="rounded-[36px] bg-parchment px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
             <SectionTitle
               eyebrow="За нас"
               title="Историята зад FestiTaste Events"
@@ -72,35 +72,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream pt-10 pb-6">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-          <article className="rounded-[32px] border border-border bg-white p-8 shadow-sm transition-shadow duration-200 hover:shadow-md">
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary">
+      <section className="bg-cream pt-8 pb-4 sm:pt-10 sm:pb-6">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-4 sm:gap-8 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-8">
+          <article className="rounded-[32px] border border-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary sm:text-sm sm:tracking-[0.35em]">
               Нашата история
             </p>
-            <h2 className="mt-4 font-display text-3xl font-bold text-text-base">
+            <h2 className="mt-4 font-display text-2xl font-bold text-text-base sm:text-3xl">
               От идея за вкусни уикенди до подбрана платформа за събития
             </h2>
-            <p className="mt-5 text-base leading-8 text-text-muted">
+            <p className="mt-5 text-sm leading-7 text-text-muted sm:text-base sm:leading-8">
               FestiTaste Events започва като малка инициатива за събиране на
               качествени кулинарни събития в България. С времето превърнахме
               подбора, организацията и вдъхновяващото представяне в основна
               мисия на бранда.
             </p>
-            <p className="mt-4 text-base leading-8 text-text-muted">
+            <p className="mt-4 text-sm leading-7 text-text-muted sm:text-base sm:leading-8">
               Днес комбинираме фестивали, специални оферти и локални истории в
               платформа, която помага на хората да избират по-лесно и да пътуват
               по-вкусно.
             </p>
           </article>
 
-          <aside className="rounded-[32px] bg-dark p-8 text-text-light shadow-sm">
+          <aside className="rounded-[32px] bg-dark p-6 text-text-light shadow-sm sm:p-8">
             <div className="flex items-center gap-3">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-rust/40 text-accent">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-rust/40 text-accent sm:h-14 sm:w-14">
                 <MapPinned size={26} />
               </div>
               <div>
-                <p className="font-display text-2xl font-bold">FestiTaste HQ</p>
+                <p className="font-display text-xl font-bold sm:text-2xl">FestiTaste HQ</p>
                 <p className="text-sm text-text-light/70">София, България</p>
               </div>
             </div>
@@ -119,21 +119,21 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-parchment py-16">
+      <section className="bg-parchment py-12 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
-            <div className="border-b border-border px-6 py-4 sm:px-8">
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary">
+            <div className="border-b border-border px-5 py-6 sm:px-8 sm:py-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary sm:text-sm sm:tracking-[0.35em]">
                 Локация
               </p>
-              <h2 className="mt-1 font-display text-3xl font-bold text-text-base">
+              <h2 className="mt-1 font-display text-2xl font-bold text-text-base sm:text-3xl">
                 Къде се намира FestiTaste HQ
               </h2>
-              <p className="mt-1 text-base leading-8 text-text-muted">
+              <p className="mt-1 text-sm leading-7 text-text-muted sm:text-base sm:leading-8">
                 бул. Витоша 25, София
               </p>
             </div>
-            <div className="h-150 w-full">
+            <div className="h-[520px] w-full sm:h-[620px] lg:h-[720px]">
               <iframe
                 title="Локация на FestiTaste Events"
                 src="https://www.google.com/maps?q=bul.%20Vitosha%2025,%20Sofia&z=15&output=embed"
@@ -146,15 +146,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-dark py-20">
+      <section className="bg-dark py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:gap-6 xl:grid-cols-4">
             {stats.map((stat) => (
               <article
                 key={stat.label}
                 className="rounded-[28px] bg-dark p-6 text-center"
               >
-                <p className="font-display text-5xl font-bold text-accent">
+                <p className="font-display text-4xl font-bold text-accent sm:text-5xl">
                   {stat.value}
                 </p>
                 <p className="mt-3 text-sm uppercase tracking-[0.3em] text-text-light/70">
@@ -166,20 +166,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-parchment py-20">
+      <section className="bg-parchment py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Екип"
             title="Екипът, който подрежда вкусовете, маршрутите и партньорствата"
             description="Три роли, една обща мисия: по-добри гурме преживявания за всеки посетител."
           />
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-8 grid gap-5 lg:mt-10 lg:grid-cols-3 lg:gap-6">
             {team.map((member) => (
               <article
                 key={member.id}
                 className="rounded-[28px] border border-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-light text-primary">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-light text-primary sm:h-14 sm:w-14">
                   <Users size={26} />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-text-base">
@@ -197,20 +197,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-20">
+      <section className="bg-cream py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Ценности"
             title="Ценности, по които изграждаме всяко събитие"
             description="Те определят както партньорствата ни, така и начина, по който представяме фестивалите."
           />
-          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 grid gap-5 md:grid-cols-2 lg:mt-10 lg:gap-6 xl:grid-cols-4">
             {values.map((value) => (
               <article
                 key={value.title}
                 className="rounded-[28px] border border-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-light text-primary">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-light text-primary sm:h-14 sm:w-14">
                   <value.icon size={26} />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-text-base">

@@ -39,7 +39,7 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
 
   return (
     <section className="space-y-8">
-      <div className="rounded-[32px] border border-border bg-cream p-5 sm:p-6">
+      <div className="rounded-[32px] border border-border bg-cream p-4 sm:p-6">
         <div className="grid gap-4 lg:grid-cols-[1.5fr_repeat(3,1fr)]">
           <label className="relative">
             <span className="sr-only">Търси събитие</span>
@@ -52,14 +52,14 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Търси по име, град или категория"
-              className="h-14 w-full rounded-full border border-border bg-white pl-12 pr-5 text-sm text-text-base outline-none focus:border-primary"
+              className="h-12 w-full rounded-full border border-border bg-white pl-11 pr-4 text-sm text-text-base outline-none focus:border-primary sm:h-14 sm:pl-12 sm:pr-5"
             />
           </label>
 
           <select
             value={city}
             onChange={(event) => setCity(event.target.value)}
-            className="h-14 rounded-full border border-border bg-white px-5 text-sm text-text-base outline-none focus:border-primary"
+            className="h-12 rounded-full border border-border bg-white px-4 text-sm text-text-base outline-none focus:border-primary sm:h-14 sm:px-5"
           >
             {cities.map((item) => (
               <option key={item} value={item}>
@@ -71,7 +71,7 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
           <select
             value={category}
             onChange={(event) => setCategory(event.target.value)}
-            className="h-14 rounded-full border border-border bg-white px-5 text-sm text-text-base outline-none focus:border-primary"
+            className="h-12 rounded-full border border-border bg-white px-4 text-sm text-text-base outline-none focus:border-primary sm:h-14 sm:px-5"
           >
             {categories.map((item) => (
               <option key={item} value={item}>
@@ -83,7 +83,7 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
           <select
             value={month}
             onChange={(event) => setMonth(event.target.value)}
-            className="h-14 rounded-full border border-border bg-white px-5 text-sm text-text-base outline-none focus:border-primary"
+            className="h-12 rounded-full border border-border bg-white px-4 text-sm text-text-base outline-none focus:border-primary sm:h-14 sm:px-5"
           >
             {months.map((item) => (
               <option key={item} value={item}>

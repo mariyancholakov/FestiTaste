@@ -10,9 +10,9 @@ const footerLinks = [
 export default function Footer() {
   return (
     <footer className="border-t border-rust/30 bg-dark text-text-light">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 lg:grid-cols-[1.4fr_0.8fr_1fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-[1.4fr_0.8fr_1fr] lg:px-8">
         <div className="space-y-4">
-          <p className="font-display text-3xl font-bold">FestiTaste Events</p>
+          <p className="font-display text-2xl font-bold sm:text-3xl">FestiTaste Events</p>
           <p className="max-w-xl text-sm leading-7 text-text-light/60">
             Платформа за кулинарни фестивали, винени уикенди и вкусни
             преживявания в България. Събираме на едно място най-апетитните
