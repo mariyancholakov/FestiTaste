@@ -52,7 +52,7 @@ const values = [
 
 const contactProfile = [
   "Тел: +359 888 123 456",
-  "Email: hello@festitaste.bg",
+  "Имейл: hello@festitaste.bg",
   "Адрес: бул. Витоша 25, София",
   "Работно време: Пон-Пет, 09:00-18:00",
 ];
@@ -72,14 +72,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream py-10">
+      <section className="bg-cream pt-10 pb-6">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
           <article className="rounded-[32px] border border-border bg-white p-8 shadow-sm transition-shadow duration-200 hover:shadow-md">
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary">
               Нашата история
             </p>
             <h2 className="mt-4 font-display text-3xl font-bold text-text-base">
-              От идея за вкусни уикенди до curated платформа за събития
+              От идея за вкусни уикенди до подбрана платформа за събития
             </h2>
             <p className="mt-5 text-base leading-8 text-text-muted">
               FestiTaste Events започва като малка инициатива за събиране на
@@ -116,6 +116,33 @@ export default function AboutPage() {
               </p>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section className="bg-parchment py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
+            <div className="border-b border-border px-6 py-4 sm:px-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary">
+                Локация
+              </p>
+              <h2 className="mt-1 font-display text-3xl font-bold text-text-base">
+                Къде се намира FestiTaste HQ
+              </h2>
+              <p className="mt-1 text-base leading-8 text-text-muted">
+                бул. Витоша 25, София
+              </p>
+            </div>
+            <div className="h-150 w-full">
+              <iframe
+                title="Локация на FestiTaste Events"
+                src="https://www.google.com/maps?q=bul.%20Vitosha%2025,%20Sofia&z=15&output=embed"
+                className="h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
