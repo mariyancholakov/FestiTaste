@@ -3,6 +3,7 @@
 import type { Testimonial } from "@/data/testimonials";
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
+import { fadeUp, gentleHover, viewportOnce } from "@/lib/motion";
 
 type TestimonialCardProps = {
   testimonial: Testimonial;
@@ -13,10 +14,11 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-      whileHover={{ scale: 1.02 }}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
+      whileHover={gentleHover}
       className="h-full rounded-[28px] border border-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
     >
       <div className="flex gap-1 text-accent">

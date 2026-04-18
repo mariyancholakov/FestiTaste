@@ -2,6 +2,7 @@
 
 import type { Offer } from "@/data/offers";
 import { motion } from "framer-motion";
+import { fadeUp, gentleHover, viewportOnce } from "@/lib/motion";
 
 type OfferCardProps = {
   offer: Offer;
@@ -10,10 +11,11 @@ type OfferCardProps = {
 export default function OfferCard({ offer }: OfferCardProps) {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-      whileHover={{ scale: 1.02 }}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
+      whileHover={gentleHover}
       className="flex h-full flex-col rounded-[28px] border border-border bg-white p-5 shadow-sm transition-shadow duration-200 hover:shadow-md sm:p-6"
     >
       <div className="flex min-h-20 items-start justify-between gap-4 sm:min-h-24">

@@ -4,6 +4,7 @@ import type { FestivalEvent } from "@/data/events";
 import { CalendarDays, MapPin, Tag } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { fadeUp, gentleHover, viewportOnce } from "@/lib/motion";
 
 type EventCardProps = {
   event: FestivalEvent;
@@ -12,10 +13,11 @@ type EventCardProps = {
 export default function EventCard({ event }: EventCardProps) {
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-      whileHover={{ scale: 1.02 }}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
+      whileHover={gentleHover}
       className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-border bg-white shadow-sm transition-shadow duration-200 hover:shadow-md"
     >
       <div className="relative border-b border-border px-5 py-6 sm:px-6 sm:py-8">

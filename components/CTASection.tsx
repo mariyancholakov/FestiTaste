@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { fadeUp, viewportOnce } from "@/lib/motion";
 
 type CTASectionProps = {
   title: string;
@@ -22,9 +23,10 @@ export default function CTASection({
 }: CTASectionProps) {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
       className="overflow-hidden rounded-[36px] bg-dark px-5 py-8 text-text-light sm:px-8 sm:py-10 lg:px-10 lg:py-12"
     >
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">

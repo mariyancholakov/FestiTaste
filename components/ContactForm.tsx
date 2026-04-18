@@ -1,12 +1,18 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { fadeUp, viewportOnce } from "@/lib/motion";
 
 export default function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
-    <form
+    <motion.form
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
       onSubmit={(event) => {
         event.preventDefault();
         event.currentTarget.reset();
@@ -75,6 +81,6 @@ export default function ContactForm() {
           Благодарим! Това е демо форма и съобщението не се изпраща реално.
         </p>
       ) : null}
-    </form>
+    </motion.form>
   );
 }

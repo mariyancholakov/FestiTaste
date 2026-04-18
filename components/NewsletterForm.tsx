@@ -2,15 +2,17 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { fadeUp, viewportOnce } from "@/lib/motion";
 
 export default function NewsletterForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
     <motion.form
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
       onSubmit={(event) => {
         event.preventDefault();
         event.currentTarget.reset();

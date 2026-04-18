@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { fadeUp, viewportOnce } from "@/lib/motion";
 
 type SectionTitleProps = {
   eyebrow?: string;
@@ -24,9 +25,10 @@ export default function SectionTitle({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 18 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={viewportOnce}
       className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}
     >
       {eyebrow ? (

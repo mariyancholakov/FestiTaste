@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/CTASection";
 import EventCard from "@/components/EventCard";
+import MotionReveal from "@/components/MotionReveal";
 import NewsletterForm from "@/components/NewsletterForm";
 import OfferCard from "@/components/OfferCard";
 import SectionTitle from "@/components/SectionTitle";
@@ -54,7 +55,7 @@ export default function HomePage() {
     <div>
       <section className="overflow-hidden border-b border-border bg-parchment">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 sm:py-14 lg:grid-cols-[1.2fr_0.8fr] lg:gap-10 lg:px-8 lg:py-20">
-          <div className="max-w-3xl text-center lg:text-left">
+          <MotionReveal className="max-w-3xl text-center lg:text-left">
             <h1 className="mt-4 font-display text-3xl font-bold leading-tight text-text-base sm:mt-6 sm:text-5xl lg:text-6xl">
               Открий най-вкусните кулинарни фестивали в България
             </h1>
@@ -77,9 +78,12 @@ export default function HomePage() {
                 Виж офертите
               </Link>
             </div>
-          </div>
+          </MotionReveal>
 
-          <div className="grid gap-5 self-end sm:grid-cols-2 lg:grid-cols-1 lg:gap-8">
+          <MotionReveal
+            delay={0.08}
+            className="grid gap-5 self-end sm:grid-cols-2 lg:grid-cols-1 lg:gap-8"
+          >
             <article className="rounded-[30px] border border-border bg-white p-5 text-text-base shadow-sm sm:p-6">
               <p className="text-xs uppercase tracking-[0.28em] text-text-muted sm:text-sm sm:tracking-[0.3em]">
                 Предстоящо събитие
@@ -102,7 +106,7 @@ export default function HomePage() {
                 30% отстъпка до 31 май
               </p>
             </article>
-          </div>
+          </MotionReveal>
         </div>
       </section>
 
