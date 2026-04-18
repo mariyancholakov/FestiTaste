@@ -58,92 +58,71 @@ const faq = [
 export default function ContactPage() {
   return (
     <div className="pb-24">
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="rounded-[36px] bg-gradient-to-r from-dark-green via-primary to-accent px-6 py-14 sm:px-10">
+      <section className="bg-parchment">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="rounded-[36px] bg-parchment px-6 py-14 sm:px-10">
+            <SectionTitle
+              eyebrow="Контакт"
+              title="Нека планираме следващото вкусно събитие заедно"
+              description="Пиши ни за билети, оферти, групови запитвания или партньорства. Отговаряме бързо и човешки."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-cream">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <div className="space-y-6">
+            {contactCards.map((card) => (
+              <article
+                key={card.title}
+                className="rounded-[28px] border border-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-light text-primary">
+                    <card.icon size={24} />
+                  </div>
+                  <div>
+                    <h2 className="text-lg font-semibold text-text-base">
+                      {card.title}
+                    </h2>
+                    <p className="mt-2 text-sm leading-7 text-text-muted">
+                      {card.value}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="flex items-center">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-parchment py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
-            eyebrow="Contact"
-            theme="light"
-            title="Нека планираме следващото вкусно събитие заедно"
-            description="Пиши ни за билети, оферти, групови запитвания или партньорства. Отговаряме бързо и човешки."
+            eyebrow="FAQ"
+            title="Често задавани въпроси"
+            description="Кратки отговори на най-честите запитвания, които получаваме около събитията и офертите."
           />
-        </div>
-      </section>
-
-      <section className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-        <div className="space-y-6">
-          {contactCards.map((card) => (
-            <article
-              key={card.title}
-              className="rounded-[28px] border border-dark-green/10 bg-white p-6 shadow-[0_18px_50px_rgba(27,67,50,0.06)]"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                  <card.icon size={24} />
-                </div>
-                <div>
-                  <h2 className="text-lg font-semibold text-dark-green">
-                    {card.title}
-                  </h2>
-                  <p className="mt-2 text-sm leading-7 text-dark-green/70">
-                    {card.value}
-                  </p>
-                </div>
-              </div>
-            </article>
-          ))}
-
-          <article className="rounded-[28px] border border-dark-green/10 bg-white p-6 shadow-[0_18px_50px_rgba(27,67,50,0.06)]">
-            <h2 className="text-lg font-semibold text-dark-green">
-              Социални мрежи
-            </h2>
-            <div className="mt-4 flex gap-3">
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex rounded-full bg-cream px-4 py-3 text-sm font-semibold text-primary transition-all duration-200 hover:scale-[1.02] hover:bg-primary hover:text-white"
-                aria-label="Instagram"
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {faq.map((item) => (
+              <article
+                key={item.question}
+                className="rounded-[28px] border border-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md"
               >
-                Instagram
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex rounded-full bg-cream px-4 py-3 text-sm font-semibold text-primary transition-all duration-200 hover:scale-[1.02] hover:bg-primary hover:text-white"
-                aria-label="Facebook"
-              >
-                Facebook
-              </a>
-            </div>
-          </article>
-        </div>
-
-        <div>
-          <ContactForm />
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-        <SectionTitle
-          eyebrow="FAQ"
-          title="Често задавани въпроси"
-          description="Кратки отговори на най-честите запитвания, които получаваме около събитията и офертите."
-        />
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {faq.map((item) => (
-            <article
-              key={item.question}
-              className="rounded-[28px] border border-dark-green/10 bg-white p-6 shadow-[0_18px_50px_rgba(27,67,50,0.06)]"
-            >
-              <h3 className="text-lg font-semibold text-dark-green">
-                {item.question}
-              </h3>
-              <p className="mt-3 text-sm leading-7 text-dark-green/70">
-                {item.answer}
-              </p>
-            </article>
-          ))}
+                <h3 className="text-lg font-semibold text-text-base">
+                  {item.question}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-text-muted">
+                  {item.answer}
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </div>

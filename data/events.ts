@@ -1,7 +1,7 @@
 export type EventCategory =
   | "Улична храна"
   | "Вино"
-  | "BBQ"
+  | "Барбекю"
   | "Десерти"
   | "Традиционна кухня"
   | "Гурме";
@@ -27,7 +27,7 @@ export type FestivalEvent = {
 export const events: FestivalEvent[] = [
   {
     id: "sofia-street-food-fest",
-    title: "Sofia Street Food Fest",
+    title: "София Стрийт Фууд Фест",
     date: "14 юни 2025",
     isoDate: "2025-06-14",
     month: "Юни",
@@ -42,7 +42,7 @@ export const events: FestivalEvent[] = [
   },
   {
     id: "plovdiv-wine-cheese-weekend",
-    title: "Plovdiv Wine & Cheese Weekend",
+    title: "Пловдив Уикенд за Вино и Сирена",
     date: "28-29 юни 2025",
     isoDate: "2025-06-28",
     month: "Юни",
@@ -57,12 +57,12 @@ export const events: FestivalEvent[] = [
   },
   {
     id: "varna-bbq-craft-beer-expo",
-    title: "Varna BBQ & Craft Beer Expo",
+    title: "Варна Барбекю и Крафт Бира Експо",
     date: "12 юли 2025",
     isoDate: "2025-07-12",
     month: "Юли",
     city: "Варна",
-    category: "BBQ",
+    category: "Барбекю",
     priceFrom: 25,
     priceLabel: "От 25 лв",
     description:
@@ -72,7 +72,7 @@ export const events: FestivalEvent[] = [
   },
   {
     id: "burgas-summer-dessert-festival",
-    title: "Burgas Summer Dessert Festival",
+    title: "Бургаски Летен Фестивал на Десертите",
     date: "2 август 2025",
     isoDate: "2025-08-02",
     month: "Август",
@@ -87,7 +87,7 @@ export const events: FestivalEvent[] = [
   },
   {
     id: "veliko-tarnovo-traditional-taste-days",
-    title: "Veliko Tarnovo Traditional Taste Days",
+    title: "Дни на Традиционния Вкус във Велико Търново",
     date: "23 август 2025",
     isoDate: "2025-08-23",
     month: "Август",
@@ -101,7 +101,7 @@ export const events: FestivalEvent[] = [
   },
   {
     id: "bansko-gourmet-escape",
-    title: "Bansko Gourmet Escape",
+    title: "Банско Гурме Бягство",
     date: "20 септември 2025",
     isoDate: "2025-09-20",
     month: "Септември",

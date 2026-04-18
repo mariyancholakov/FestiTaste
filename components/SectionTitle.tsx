@@ -17,10 +17,10 @@ export default function SectionTitle({
   centered = false,
   theme = "dark",
 }: SectionTitleProps) {
-  const eyebrowClass = theme === "light" ? "text-cream/75" : "text-primary";
-  const titleClass = theme === "light" ? "text-white" : "text-dark-green";
+  const eyebrowClass = theme === "light" ? "text-text-light/75" : "text-primary";
+  const titleClass = theme === "light" ? "text-text-light" : "text-text-base";
   const descriptionClass =
-    theme === "light" ? "text-white/82" : "text-dark-green/70";
+    theme === "light" ? "text-text-light/75" : "text-text-muted";
 
   return (
     <motion.div

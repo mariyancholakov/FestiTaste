@@ -39,27 +39,27 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
 
   return (
     <section className="space-y-8">
-      <div className="rounded-[32px] border border-dark-green/10 bg-white p-5 shadow-[0_18px_50px_rgba(27,67,50,0.06)] sm:p-6">
+      <div className="rounded-[32px] border border-border bg-cream p-5 sm:p-6">
         <div className="grid gap-4 lg:grid-cols-[1.5fr_repeat(3,1fr)]">
           <label className="relative">
             <span className="sr-only">Търси събитие</span>
             <Search
               size={18}
-              className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-dark-green/40"
+              className="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-text-muted"
             />
             <input
               type="search"
               value={search}
               onChange={(event) => setSearch(event.target.value)}
               placeholder="Търси по име, град или категория"
-              className="h-14 w-full rounded-full border border-dark-green/10 bg-bg pl-12 pr-5 text-sm text-dark-green outline-none focus:border-primary"
+              className="h-14 w-full rounded-full border border-border bg-white pl-12 pr-5 text-sm text-text-base outline-none focus:border-primary"
             />
           </label>
 
           <select
             value={city}
             onChange={(event) => setCity(event.target.value)}
-            className="h-14 rounded-full border border-dark-green/10 bg-bg px-5 text-sm text-dark-green outline-none focus:border-primary"
+            className="h-14 rounded-full border border-border bg-white px-5 text-sm text-text-base outline-none focus:border-primary"
           >
             {cities.map((item) => (
               <option key={item} value={item}>
@@ -71,7 +71,7 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
           <select
             value={category}
             onChange={(event) => setCategory(event.target.value)}
-            className="h-14 rounded-full border border-dark-green/10 bg-bg px-5 text-sm text-dark-green outline-none focus:border-primary"
+            className="h-14 rounded-full border border-border bg-white px-5 text-sm text-text-base outline-none focus:border-primary"
           >
             {categories.map((item) => (
               <option key={item} value={item}>
@@ -83,7 +83,7 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
           <select
             value={month}
             onChange={(event) => setMonth(event.target.value)}
-            className="h-14 rounded-full border border-dark-green/10 bg-bg px-5 text-sm text-dark-green outline-none focus:border-primary"
+            className="h-14 rounded-full border border-border bg-white px-5 text-sm text-text-base outline-none focus:border-primary"
           >
             {months.map((item) => (
               <option key={item} value={item}>
@@ -94,7 +94,7 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
         </div>
       </div>
 
-      <p className="text-sm text-dark-green/55">
+      <p className="text-sm text-text-muted">
         Показани събития: <span className="font-semibold">{filteredEvents.length}</span>
       </p>
 
@@ -105,7 +105,7 @@ export default function EventsExplorer({ events }: EventsExplorerProps) {
           ))}
         </div>
       ) : (
-        <div className="rounded-[28px] border border-dashed border-primary/30 bg-white px-6 py-12 text-center text-dark-green/65">
+        <div className="rounded-[28px] border border-dashed border-border bg-white px-6 py-12 text-center text-text-muted">
           Няма намерени събития по текущите критерии. Пробвай с друг град,
           месец или по-кратка заявка.
         </div>
