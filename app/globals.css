@@ -1,26 +1,47 @@
+@config "../tailwind.config.ts";
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf8;
+  --foreground: #1b4332;
+  --font-body-stack: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
+  --font-display-stack: "Palatino Linotype", "Book Antiqua", "Hoefler Text",
+    Georgia, serif;
 }
 
 @theme inline {
+  --color-primary: #c0392b;
+  --color-accent: #e67e22;
+  --color-cream: #fdf6ec;
+  --color-dark-green: #1b4332;
+  --color-bg: #fafaf8;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body-stack);
+  --font-display: var(--font-display-stack);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at top, rgba(230, 126, 34, 0.14), transparent 32%),
+    linear-gradient(180deg, #fafaf8 0%, #fffef9 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body-stack);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition: all 200ms ease;
+}
+
+::selection {
+  background: rgba(192, 57, 43, 0.18);
+  color: #1b4332;
 }
