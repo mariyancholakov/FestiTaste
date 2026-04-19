@@ -36,12 +36,12 @@ export default function OffersPage() {
   return (
     <div>
       <section className="bg-parchment">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
           <div className="rounded-[36px] bg-parchment px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
             <SectionTitle
               eyebrow="Оферти"
-              title="Пакети и специални предложения за по-вкусно планиране"
-              description="От ранни резервации до уикенд пакети с нощувки, тук са събрани най-полезните предложения за сезона."
+              title="Оферти и специални предложения за по-вкусно планиране"
+              description="Тук са събрани най-новите и полезни предложения за сезона."
             />
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function OffersPage() {
         </div>
       </section>
 
-      <section className="bg-cream">
+      {/* <section className="bg-cream">
         <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
           <CTASection
             title="Искаш да комбинираме фестивал и оферта вместо теб?"
@@ -101,7 +101,7 @@ export default function OffersPage() {
             secondaryLabel="Виж събитията"
           />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

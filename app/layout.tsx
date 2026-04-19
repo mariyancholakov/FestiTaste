@@ -65,14 +65,6 @@ export const metadata: Metadata = {
       "Подбрани кулинарни фестивали, гурме събития и оферти в България.",
     images: ["/opengraph-image"],
   },
-  icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico" },
-    ],
-    shortcut: ["/favicon.ico"],
-    apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
-  },
   robots: {
     index: true,
     follow: true,
@@ -99,7 +91,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: "FestiTaste Events",
     url: siteUrl,
-    logo: `${siteUrl}/icon.svg`,
+    logo: `${siteUrl}/logo.png`,
     email: "hello@festitaste.bg",
     telephone: "+359 888 123 456",
     address: {

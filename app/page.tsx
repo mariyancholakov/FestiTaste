@@ -60,8 +60,8 @@ export default function HomePage() {
               Открий най-вкусните кулинарни фестивали в България
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-text-muted sm:mx-auto sm:mt-6 sm:text-lg sm:leading-8 lg:mx-0">
-              FestiTaste Events събира на едно място фестивали и събития, както
-              и специални предложения за хора, които обичат да пътуват чрез
+              FestiTaste събира на едно място фестивали и събития, както и
+              специални предложения за хора, които обичат да пътуват чрез
               вкусове.
             </p>
             <div className="mt-8 flex flex-row flex-wrap justify-center gap-3 sm:mt-10 sm:gap-4 lg:justify-start">
@@ -92,7 +92,7 @@ export default function HomePage() {
                 София Стрийт Фууд Фест
               </p>
               <p className="mt-2 text-sm text-text-muted">
-                14 юни 2025 · София
+                14 юни 2026 · София
               </p>
             </article>
             <article className="rounded-[30px] border border-primary bg-accent-light p-5 text-text-base shadow-sm sm:p-6">
@@ -114,7 +114,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Подбрани събития"
-            title="Подбрани фестивали, които започват сезона силно"
+            title="Най-популярните и нови събития"
             description="Три събития, на които си струва да отидеш през 2026."
           />
           <div className="mt-8 grid gap-5 lg:mt-10 lg:grid-cols-3 lg:gap-6">
@@ -171,7 +171,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-parchment py-14 sm:py-16 lg:py-20">
+      {/* <section className="bg-parchment py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Отзиви"
@@ -185,13 +185,13 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-cream py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <CTASection
-            title="Планирай следващия си вкусен уикенд"
-            description="Разгледай пълния календар от събития или директно ни пиши, ако искаш препоръка според града, бюджета и категорията."
+            title="Планирай следващия си уикенд"
+            description="Разгледай пълния календар от събития или директно ни пиши, ако искаш препоръка."
             primaryHref="/events"
             primaryLabel="Към всички събития"
             secondaryHref="/contact"
@@ -204,8 +204,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="Бюлетин"
-            title="Получи следващите фестивали първи"
-            description="Абонирай се за бюлетина и ще изпращаме селекция от нови фестивали, оферти и вдъхновяващи маршрути."
+            title="Получавай напомняния за нови фестивали"
+            description="Абонирай се за да получаваш селекция от нови фестивали и оферти."
             centered
           />
           <div className="mt-8">

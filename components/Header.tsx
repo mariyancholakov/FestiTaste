@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -27,20 +28,25 @@ export default function Header() {
           href="/"
           className="flex items-center gap-3 text-dark transition-all duration-200 hover:text-primary"
         >
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xs font-bold text-white sm:h-11 sm:w-11 sm:text-sm">
-            FT
-          </span>
+          <Image
+            src="/logo.png"
+            alt="FestiTaste logo"
+            width={44}
+            height={44}
+            priority
+            className="h-12 w-12 rounded-full object-cover sm:h-11 sm:w-11"
+          />
           <span>
             <span className="block font-display text-lg font-bold leading-none sm:text-xl">
               Festi<span className="text-primary">Taste</span>
             </span>
-            <span className="block text-[10px] uppercase tracking-[0.28em] text-text-muted sm:text-xs sm:tracking-[0.35em]">
-              Events
-            </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-2 md:flex" aria-label="Основна навигация">
+        <nav
+          className="hidden items-center gap-2 md:flex"
+          aria-label="Основна навигация"
+        >
           {navigation.map((item) => {
             const active = isActive(item.href);
 

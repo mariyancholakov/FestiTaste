@@ -13,7 +13,7 @@ const contactCards = [
   {
     icon: Phone,
     title: "Телефон",
-    value: "+359 888 123 456",
+    value: "+359 123 456 789",
   },
   {
     icon: Mail,
@@ -57,14 +57,14 @@ const faq = [
 
 export default function ContactPage() {
   return (
-    <div className="pb-24">
+    <div>
       <section className="bg-parchment">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
           <div className="rounded-[36px] bg-parchment px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14">
             <SectionTitle
               eyebrow="Контакт"
-              title="Нека планираме следващото вкусно събитие заедно"
-              description="Пиши ни за билети, оферти, групови запитвания или партньорства. Отговаряме бързо и човешки."
+              title="Тук можете да се свържете с нас и да ни пишете за всичко"
+              description="Пиши ни за билети, оферти, групови запитвания или партньорства."
             />
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="bg-parchment py-14 sm:py-16 lg:py-20">
+      {/* <section className="bg-parchment py-14 sm:py-16 lg:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionTitle
             eyebrow="FAQ"
@@ -124,7 +124,7 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

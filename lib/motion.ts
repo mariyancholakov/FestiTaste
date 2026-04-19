@@ -1,4 +1,4 @@
-import type { Variants } from "framer-motion";
+import type { TargetAndTransition, Variants } from "framer-motion";
 
 export const viewportOnce = {
   once: true,
@@ -20,10 +20,10 @@ export const fadeUp: Variants = {
   },
 };
 
-export const gentleHover = {
+export const gentleHover: TargetAndTransition = {
   y: -4,
   transition: {
     duration: 0.22,
-    ease: "easeOut",
+    ease: [0, 0, 0.2, 1],
   },
 };

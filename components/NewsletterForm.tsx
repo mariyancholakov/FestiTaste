@@ -40,7 +40,7 @@ export default function NewsletterForm() {
       </p>
       {isSubmitted ? (
         <p className="mt-4 text-sm font-semibold text-primary">
-          Благодарим! Формата е демо и не изпраща данни към backend.
+          Абонирахте се успешно!
         </p>
       ) : null}
     </motion.form>

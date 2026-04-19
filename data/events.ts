@@ -28,8 +28,8 @@ export const events: FestivalEvent[] = [
   {
     id: "sofia-street-food-fest",
     title: "София Стрийт Фууд Фест",
-    date: "14 юни 2025",
-    isoDate: "2025-06-14",
+    date: "14 юни 2026",
+    isoDate: "2026-06-14",
     month: "Юни",
     city: "София",
     category: "Улична храна",
@@ -43,8 +43,8 @@ export const events: FestivalEvent[] = [
   {
     id: "plovdiv-wine-cheese-weekend",
     title: "Пловдив Уикенд за Вино и Сирена",
-    date: "28-29 юни 2025",
-    isoDate: "2025-06-28",
+    date: "28-29 юни 2026",
+    isoDate: "2026-06-28",
     month: "Юни",
     city: "Пловдив",
     category: "Вино",
@@ -58,8 +58,8 @@ export const events: FestivalEvent[] = [
   {
     id: "varna-bbq-craft-beer-expo",
     title: "Варна Барбекю и Крафт Бира Експо",
-    date: "12 юли 2025",
-    isoDate: "2025-07-12",
+    date: "12 юли 2026",
+    isoDate: "2026-07-12",
     month: "Юли",
     city: "Варна",
     category: "Барбекю",
@@ -73,7 +73,7 @@ export const events: FestivalEvent[] = [
   {
     id: "burgas-summer-dessert-festival",
     title: "Бургаски Летен Фестивал на Десертите",
-    date: "2 август 2025",
+    date: "2 август 2026",
     isoDate: "2025-08-02",
     month: "Август",
     city: "Бургас",
@@ -88,7 +88,7 @@ export const events: FestivalEvent[] = [
   {
     id: "veliko-tarnovo-traditional-taste-days",
     title: "Дни на Традиционния Вкус във Велико Търново",
-    date: "23 август 2025",
+    date: "23 август 2026",
     isoDate: "2025-08-23",
     month: "Август",
     city: "В. Търново",
@@ -102,7 +102,7 @@ export const events: FestivalEvent[] = [
   {
     id: "bansko-gourmet-escape",
     title: "Банско Гурме Бягство",
-    date: "20 септември 2025",
+    date: "20 септември 2026",
     isoDate: "2025-09-20",
     month: "Септември",
     city: "Банско",
